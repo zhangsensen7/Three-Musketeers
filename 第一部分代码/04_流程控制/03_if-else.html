@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -83,8 +84,21 @@
         /* 
             - 练习1：
             编写一个程序，获取一个用户输入的整数。然后通过程序显示这个数是奇数还是偶数。
+         
+                let num = +prompt("你的整数是？")
+                if (isNaN(num)){
+                        if (num % 2 == 0) {
+                        alert("奇数")
+                        }else {
+                    alert("偶数")
+                        }
+                }else{
+                    alert("下一位")
+                }
+                
 
 
+                
             - 练习2：
             从键盘输入小明的期末成绩:
                     当成绩为100时，'奖励一辆BMW'
@@ -107,9 +121,12 @@
 
         alert(typeof num)
 
+        //这里非数值字符串，转化完typeof是number
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

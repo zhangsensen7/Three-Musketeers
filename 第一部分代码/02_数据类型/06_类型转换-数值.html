@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,12 @@
                     转换的情况：
                         - 字符串：
                             - 如果字符串是一个合法的数字，则会自动转换为对应的数字
-                            - 如果字符串不是合法数字，则转换为NaN
+                            - 如果字符串不是合法数字，则转换为NaN,
+                        
+                            let b = "23x"
+                            c = +b
+                            console.log(typeof c ) //'number'他妈的这也是number？
+
                             - 如果字符串是空串或纯空格的字符串，则转换为0
                         - 布尔值：
                             - true转换为1，false转换为0
@@ -44,7 +50,7 @@
 
         a = Number(a)
         // console.log(typeof a, a)
-        
+
         let b = '123px'
         b = 'a123'
         b = '123.45'
@@ -53,12 +59,14 @@
 
         b = parseInt(b)
         console.log(typeof b, b)
-        
-        
+
+
 
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +25,7 @@
                 - 或运算是找true，如果找到true则直接返回，没有true才会返回false
                 - 对于非布尔值或运算，它会转换为布尔值然后运算
                     但是最终会返回原值
+
                     - 如果第一个值为true，则返回第一个
                         如果第一个值为false，则返回第二个
         */
@@ -36,6 +38,8 @@
         // true && alert(123) // 第一个值为true，alert会执行
         false && alert(123) // 第一个值为false，alert不会执行
 
+
+        //与实际就是找false，找到了就不往下了，找不到就最后一个
         //       true && true  -> true
         result = 1 && 2 // 2 
         //       true && false -> false
@@ -58,12 +62,14 @@
         result = NaN || null // null
 
         console.log(result)
-        
-        
+
+
 
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
