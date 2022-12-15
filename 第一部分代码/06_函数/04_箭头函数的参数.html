@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
             console.log("a =", a);
             console.log("b =", b);
         }
+        fn()
 
 
         // 当箭头函数中只有一个参数时，可以省略()
@@ -22,7 +24,7 @@
 
         // 定义参数时，可以为参数指定默认值
         // 默认值，会在没有对应实参时生效
-        const fn3 = (a=10, b=20, c=30) => {
+        const fn3 = (a = 10, b = 20, c = 30) => {
             console.log("a =", a);
             console.log("b =", b);
             console.log("c =", c);
@@ -32,7 +34,9 @@
 
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

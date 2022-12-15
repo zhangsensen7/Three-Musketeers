@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
 
-        <script>
-            /*
-                希望在someFn()函数执行时，可以记录一条日志
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-                在不修改原函数的基础上，为其增加记录日志的功能
+    <script>
+        /*
+            希望在someFn()函数执行时，可以记录一条日志
 
-                可以通过高阶函数，来动态的生成一个新函数
-            */
+            在不修改原函数的基础上，为其增加记录日志的功能
 
-            function someFn() {
-                return "hello"
+            可以通过高阶函数，来动态的生成一个新函数
+        */
+        //自己的
+        function someFn() {
+            return "hello"
+        }
+        // function outer(cb){
+        //     console.log("新增日志功能")
+        //     return cb()
+        // }
+        // let a = outer(someFn)
+        // console.log(a)
+        
+        function outer(cb) {
+            return () => {                     
+                console.log("记录日志~~~~~")
+                return cb()         
             }
+        }
 
-            function outer(cb){
-                return () => {
-                    console.log("记录日志~~~~~")
-                    const result = cb()
-                    return result
-                }
-            }
-
-            let result = outer(someFn)
-
-            // console.log(result)
+        //第一种
+        //装饰器一样
+        let rizhi = outer(someFn)
+        rizhi()
 
 
-            function test(){
-                console.log("test~~~~")
-                return "test"
-            }
+        //第二种
+        outer(someFn)()
+        //outer(someFn)返回的箭头函数，要去调用一下这个箭头函数
 
-            let newTest = outer(test)
 
-            newTest()
-        </script>
-    </head>
-    <body></body>
+
+
+
+
+
+
+
+        
+        // function test() {
+        //     console.log("test~~~~")
+        //     return "test"
+        // }
+
+        // let newTest = outer(test)
+        // newTest()
+    </script>
+</head>
+
+<body></body>
+
 </html>
