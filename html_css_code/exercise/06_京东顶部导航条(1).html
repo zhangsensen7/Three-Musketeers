@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东顶部导航条</title>
+    <!-- 引入重置样式表 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引用图标字体 -->
+    <link rel="stylesheet" href="./fa/css/all.css">
+
+    <style>
+        body {
+            /* 设置字体 */
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        /* 外部容器 */
+        .top-bar-wrapper {
+            width: 100%;
+            background-color: #E3E4E5;
+            height: 30px;
+            line-height: 30px;
+            color: #999;
+        }
+
+        /* 版心 */
+        .top-bar {
+            width: 1190px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+
+        /* 左侧盒子 */
+        .location {
+            float: left;
+
+        }
+
+        /* 左侧盒子的图标 */
+        .location .fas {
+            color: #f10215;
+        }
+
+        /* 右侧盒子的图标 */
+        .shortcut .fas {
+            color: blue;
+
+        }
+
+        /* 右侧大盒子 */
+        .shortcut {
+            float: right;
+        }
+
+        /* 右侧小盒子 */
+        .shortcut li {
+            float: left;
+
+        }
+
+        .top-bar a:hover,
+        .top-bar a.highlight {
+            color: #f10215;
+        }
+
+        /* 小li做成小竖线，没有宽和高的时候其实是被隐藏的（因为浮动行内块，里面又没有内容，） */
+        .shortcut .line {
+            width: 1px;
+            height: 10px;
+            background-color: rgb(204, 202, 202);
+            margin: 12px 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建外围的容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 创建内部容器 -->
+        <div class="top-bar clearfix">
+            <!-- 左侧的菜单 -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">北京</a>
+                </div>
+
+                <!-- 放置城市列表的div -->
+                <div class="city-list">
+
+                </div>
+            </div>
+
+            <!-- 右侧的菜单 -->
+            <ul class="shortcut clearfix">
+                <li>
+                    <a href="javascript:;">你好，请登录</a>
+                    <a class="highlight" href="javascript:;">免费注册</a>
+                </li>
+
+                <!-- 分割线 -->
+                <li class="line"></li>
+                <li><a href="javascript:;">我的订单</a></li>
+
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+
+                <li class="line"></li>
+                <li><a href="javascript:;">京东会员</a></li>
+
+                <li class="line"></li>
+                <li>
+                    <a class="highlight" href="javascript:;">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+
+
+                <li class="line"></li>
+                <li>
+                    <span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <span>手机京东</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
