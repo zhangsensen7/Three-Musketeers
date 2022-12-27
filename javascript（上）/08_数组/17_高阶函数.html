@@ -19,29 +19,37 @@
         function someFn() {
             return "hello"
         }
+
+
         // function outer(cb){
         //     console.log("新增日志功能")
         //     return cb()
         // }
         // let a = outer(someFn)
+
         // console.log(a)
         
+
+
         function outer(cb) {
             return () => {                     
                 console.log("记录日志~~~~~")
                 return cb()         
             }
         }
+            let a = outer(someFn)
 
-        //第一种
-        //装饰器一样
-        let rizhi = outer(someFn)
-        rizhi()
+        console.log(a)
+        // //第一种
+        // //装饰器一样
+        // let rizhi = outer(someFn)
+        // a = rizhi()
+        
 
 
-        //第二种
-        outer(someFn)()
-        //outer(someFn)返回的箭头函数，要去调用一下这个箭头函数
+        // //第二种
+        // outer(someFn)()
+        // //outer(someFn)返回的箭头函数，要去调用一下这个箭头函数
 
 
 
